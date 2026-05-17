@@ -1,10 +1,17 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Volunteer() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitted(true);
+  };
+
   return (
     <section id="volunteer" className="py-16 px-6 bg-paper relative overflow-hidden">
       {/* Background Collage Elements */}
@@ -90,7 +97,18 @@ export default function Volunteer() {
               Registration Form
             </h3>
 
-            <form className="space-y-8">
+            {isSubmitted ? (
+              <div className="py-20 text-center space-y-6 animate-fade-in">
+                <div className="w-16 h-16 bg-rust/10 text-rust rounded-full flex items-center justify-center mx-auto mb-6">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <h4 className="text-4xl font-display text-ink">Application <span className="italic text-rust">Received!</span></h4>
+                <p className="font-serif text-ink/60 text-lg">Thank you for joining our mission. We'll be in touch within 48 hours.</p>
+              </div>
+            ) : (
+            <form className="space-y-8" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="space-y-2">
                   <label className="font-sans text-[10px] uppercase tracking-widest text-ink/40">Full Name</label>
@@ -125,6 +143,7 @@ export default function Volunteer() {
                 We'll get back to you within 48 hours.
               </p>
             </form>
+            )}
           </motion.div>
         </div>
       </div>
