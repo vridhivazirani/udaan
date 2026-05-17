@@ -18,7 +18,7 @@ export default function Hero() {
       {/* Navigation */}
       <nav className="absolute top-0 left-0 right-0 z-[100] flex items-center justify-between p-8 lg:px-16 opacity-0 animate-fade-down [animation-delay:0.8s]">
         <a href="#home" className="flex items-center gap-2 font-display text-2xl font-black tracking-widest text-ink group">
-          <div className="pointer-events-none transition-transform duration-700 group-hover:rotate-6 -ml-4">
+          <div className="pointer-events-none transition-transform duration-700 group-hover:rotate-6 -ml-4 -mr-12">
             <svg width="120" height="120" viewBox="0 0 230 230">
               <ellipse cx="55" cy="168" rx="42" ry="16" fill="#5a6e4a" opacity="0.7" transform="rotate(-35 55 168)"/>
               <ellipse cx="85" cy="148" rx="36" ry="13" fill="#4a5e3a" opacity="0.65" transform="rotate(-55 85 148)"/>
