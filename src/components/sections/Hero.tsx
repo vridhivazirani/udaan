@@ -17,9 +17,9 @@ export default function Hero() {
 
       {/* Navigation */}
       <nav className="absolute top-0 left-0 right-0 z-[100] flex items-center justify-between p-8 lg:px-16 opacity-0 animate-fade-down [animation-delay:0.8s]">
-        <a href="#home" className="relative flex items-center gap-3 font-display text-xl font-black tracking-widest text-ink group mt-4 ml-4">
-          <div className="absolute -top-[100px] -left-[90px] pointer-events-none -z-10 transition-transform duration-700 group-hover:scale-105">
-            <svg width="230" height="230" viewBox="0 0 230 230">
+        <a href="#home" className="flex items-center gap-2 font-display text-2xl font-black tracking-widest text-ink group">
+          <div className="pointer-events-none transition-transform duration-700 group-hover:rotate-6 -ml-4">
+            <svg width="120" height="120" viewBox="0 0 230 230">
               <ellipse cx="55" cy="168" rx="42" ry="16" fill="#5a6e4a" opacity="0.7" transform="rotate(-35 55 168)"/>
               <ellipse cx="85" cy="148" rx="36" ry="13" fill="#4a5e3a" opacity="0.65" transform="rotate(-55 85 148)"/>
               <ellipse cx="35" cy="138" rx="30" ry="11" fill="#6a7e5a" opacity="0.6" transform="rotate(-20 35 138)"/>
@@ -38,8 +38,7 @@ export default function Hero() {
               <ellipse cx="42" cy="100" rx="7" ry="12" fill="#d44820" opacity="0.52" transform="rotate(-22 42 100)"/>
             </svg>
           </div>
-          <span className="w-2 h-2 bg-rust rounded-full relative z-10"></span>
-          <span className="relative z-10">UDAAN</span>
+          <span className="pt-2">UDAAN</span>
         </a>
         <ul className="flex gap-8 list-none">
           <li><a href="#about" className="text-xs tracking-widest uppercase font-medium text-ink/50 hover:text-rust transition-colors">About</a></li>
