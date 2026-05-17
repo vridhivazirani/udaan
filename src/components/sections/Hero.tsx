@@ -9,7 +9,7 @@ const BirdFlockCanvas = dynamic(() => import("../BirdFlockCanvas"), { ssr: false
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen w-full bg-bg overflow-hidden flex items-center justify-center py-16 px-6 lg:px-16" id="home">
+    <section className="relative min-h-screen w-full bg-bg overflow-hidden flex flex-col pt-32 lg:pt-40 px-6 lg:px-16" id="home">
       {/* Background Layer: Birds & Grain */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-40">
         <BirdFlockCanvas />
@@ -51,7 +51,7 @@ export default function Hero() {
       </div>
 
       {/* Main Scene Container */}
-      <div className="relative w-full max-w-7xl mx-auto z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="relative w-full max-w-7xl mx-auto z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center flex-1 mb-16 lg:mb-24">
         
         {/* Background Paper Rect */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[115%] h-[110%] bg-paper/20 border border-ink/5 -z-10 shadow-sm rotate-1 hidden lg:block" />
@@ -92,12 +92,12 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex gap-6 items-center"
+            className="flex gap-6 items-center relative z-50"
           >
-            <a href="#volunteer" className="bg-ink text-bg px-10 py-5 font-sans text-xs font-bold tracking-widest uppercase hover:bg-rust transition-all flex items-center gap-3 group">
+            <a href="#volunteer" className="relative z-50 bg-ink text-bg px-10 py-5 font-sans text-xs font-bold tracking-widest uppercase hover:bg-rust transition-all flex items-center gap-3 group">
               Take Flight <span className="text-lg group-hover:translate-x-1 transition-transform">→</span>
             </a>
-            <a href="#about" className="text-xs font-bold tracking-widest uppercase text-ink/40 hover:text-ink transition-colors">
+            <a href="#about" className="relative z-50 text-xs font-bold tracking-widest uppercase text-ink/40 hover:text-ink transition-colors">
               Our mission ↓
             </a>
           </motion.div>
@@ -125,7 +125,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom Stats */}
-      <div className="absolute bottom-0 left-0 right-0 p-8 lg:px-16 flex flex-wrap justify-between items-end z-20">
+      <div className="w-full flex flex-wrap justify-between items-end z-20 mt-auto pb-8 max-w-7xl mx-auto">
         <div className="flex gap-12 mb-4 lg:mb-0">
           <div className="flex flex-col">
             <span className="font-display text-3xl font-black text-rust">12–18</span>
