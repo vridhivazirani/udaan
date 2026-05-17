@@ -17,9 +17,29 @@ export default function Hero() {
 
       {/* Navigation */}
       <nav className="absolute top-0 left-0 right-0 z-[100] flex items-center justify-between p-8 lg:px-16 opacity-0 animate-fade-down [animation-delay:0.8s]">
-        <a href="#home" className="flex items-center gap-3 font-display text-xl font-black tracking-widest text-ink">
-          <span className="w-2 h-2 bg-rust rounded-full"></span>
-          UDAAN
+        <a href="#home" className="relative flex items-center gap-3 font-display text-xl font-black tracking-widest text-ink group mt-4 ml-4">
+          <div className="absolute -top-[100px] -left-[90px] pointer-events-none -z-10 transition-transform duration-700 group-hover:scale-105">
+            <svg width="230" height="230" viewBox="0 0 230 230">
+              <ellipse cx="55" cy="168" rx="42" ry="16" fill="#5a6e4a" opacity="0.7" transform="rotate(-35 55 168)"/>
+              <ellipse cx="85" cy="148" rx="36" ry="13" fill="#4a5e3a" opacity="0.65" transform="rotate(-55 85 148)"/>
+              <ellipse cx="35" cy="138" rx="30" ry="11" fill="#6a7e5a" opacity="0.6" transform="rotate(-20 35 138)"/>
+              <circle cx="105" cy="95" r="34" fill="#e8845a" opacity="0.82"/>
+              <circle cx="68" cy="78" r="25" fill="#c4521a" opacity="0.76"/>
+              <circle cx="136" cy="74" r="21" fill="#e8b48a" opacity="0.7"/>
+              <ellipse cx="105" cy="58" rx="15" ry="28" fill="#e05030" opacity="0.78"/>
+              <ellipse cx="71" cy="65" rx="13" ry="23" fill="#d44820" opacity="0.72" transform="rotate(-32 71 65)"/>
+              <ellipse cx="137" cy="63" rx="13" ry="21" fill="#e08050" opacity="0.72" transform="rotate(28 137 63)"/>
+              <ellipse cx="58" cy="52" rx="11" ry="19" fill="#c4521a" opacity="0.66" transform="rotate(-16 58 52)"/>
+              <circle cx="105" cy="95" r="13" fill="#fae0a0" opacity="0.92"/>
+              <circle cx="105" cy="95" r="7" fill="#c9a84c" opacity="0.95"/>
+              <circle cx="68" cy="78" r="9" fill="#fae0a0" opacity="0.86"/>
+              <circle cx="68" cy="78" r="4.5" fill="#c9a84c" opacity="0.9"/>
+              <ellipse cx="156" cy="84" rx="9" ry="15" fill="#e85a3a" opacity="0.58" transform="rotate(12 156 84)"/>
+              <ellipse cx="42" cy="100" rx="7" ry="12" fill="#d44820" opacity="0.52" transform="rotate(-22 42 100)"/>
+            </svg>
+          </div>
+          <span className="w-2 h-2 bg-rust rounded-full relative z-10"></span>
+          <span className="relative z-10">UDAAN</span>
         </a>
         <ul className="flex gap-8 list-none">
           <li><a href="#about" className="text-xs tracking-widest uppercase font-medium text-ink/50 hover:text-rust transition-colors">About</a></li>
@@ -28,27 +48,7 @@ export default function Hero() {
         </ul>
       </nav>
 
-      {/* RESTORED: Floral Decor elements (The Poppy) */}
-      <div className="absolute pointer-events-none z-[10] top-[10px] left-[10px] opacity-0 animate-fade-in [animation-delay:1.4s]">
-        <svg width="230" height="230" viewBox="0 0 230 230">
-          <ellipse cx="55" cy="168" rx="42" ry="16" fill="#5a6e4a" opacity="0.7" transform="rotate(-35 55 168)"/>
-          <ellipse cx="85" cy="148" rx="36" ry="13" fill="#4a5e3a" opacity="0.65" transform="rotate(-55 85 148)"/>
-          <ellipse cx="35" cy="138" rx="30" ry="11" fill="#6a7e5a" opacity="0.6" transform="rotate(-20 35 138)"/>
-          <circle cx="105" cy="95" r="34" fill="#e8845a" opacity="0.82"/>
-          <circle cx="68" cy="78" r="25" fill="#c4521a" opacity="0.76"/>
-          <circle cx="136" cy="74" r="21" fill="#e8b48a" opacity="0.7"/>
-          <ellipse cx="105" cy="58" rx="15" ry="28" fill="#e05030" opacity="0.78"/>
-          <ellipse cx="71" cy="65" rx="13" ry="23" fill="#d44820" opacity="0.72" transform="rotate(-32 71 65)"/>
-          <ellipse cx="137" cy="63" rx="13" ry="21" fill="#e08050" opacity="0.72" transform="rotate(28 137 63)"/>
-          <ellipse cx="58" cy="52" rx="11" ry="19" fill="#c4521a" opacity="0.66" transform="rotate(-16 58 52)"/>
-          <circle cx="105" cy="95" r="13" fill="#fae0a0" opacity="0.92"/>
-          <circle cx="105" cy="95" r="7" fill="#c9a84c" opacity="0.95"/>
-          <circle cx="68" cy="78" r="9" fill="#fae0a0" opacity="0.86"/>
-          <circle cx="68" cy="78" r="4.5" fill="#c9a84c" opacity="0.9"/>
-          <ellipse cx="156" cy="84" rx="9" ry="15" fill="#e85a3a" opacity="0.58" transform="rotate(12 156 84)"/>
-          <ellipse cx="42" cy="100" rx="7" ry="12" fill="#d44820" opacity="0.52" transform="rotate(-22 42 100)"/>
-        </svg>
-      </div>
+      {/* RESTORED: Floral Decor elements (The Poppy) - Moved inside Nav for alignment */}
 
       {/* Main Scene Container */}
       <div className="relative w-full max-w-7xl mx-auto z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center flex-1 mb-16 lg:mb-24">
