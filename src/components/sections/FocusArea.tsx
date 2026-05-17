@@ -50,7 +50,7 @@ export default function FocusArea() {
           {areas.map((area, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.9, rotate: Math.random() * 4 - 2 }}
+              initial={{ opacity: 0, scale: 0.9, rotate: (index % 2 === 0 ? 1 : -1) * (1 + (index % 3)) }}
               whileInView={{ opacity: 1, scale: 1 }}
               whileHover={{ scale: 1.05, rotate: 0, zIndex: 20 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
